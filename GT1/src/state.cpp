@@ -2,7 +2,7 @@
 
 std::string State::getText() const
 {
-	return std::string();
+	return text;
 }
 
 void State::setText(std::string t)

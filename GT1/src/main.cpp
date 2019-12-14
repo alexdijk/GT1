@@ -6,7 +6,7 @@ int main(int argc, char** argv)
 
 	std::cout << "Text A: " << s.getText() << std::endl;
 	
-	s.setText("Cool B");
+	s.setText(std::string("Cool B"));
 
 	std::cout << "Text B: " << s.getText() << std::endl;
 
