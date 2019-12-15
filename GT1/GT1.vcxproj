@@ -20,9 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\single_imgui.cpp" />
     <ClCompile Include="src\state.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\imgui-SFML_export.h" />
+    <ClInclude Include="include\single_imgui.hpp" />
     <ClInclude Include="include\state.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -79,11 +82,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(SolutionDir)$(BaseIntermediateOutputPath)</IntDir>
-    <IncludePath>C:\Users\alexd\source\repos\GT1\GT1\include;$(IncludePath)</IncludePath>
-    <SourcePath>C:\Users\alexd\source\repos\GT1\GT1\src;$(SourcePath)</SourcePath>
+    <IncludePath>C:\Users\alexd\source\repos\sfmlresc\SFML\out\install\include;C:\Users\alexd\source\repos\GT1\GT1\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\alexd\source\repos\sfmlresc\SFML\out\install\include;C:\Users\alexd\source\repos\GT1\GT1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\alexd\source\repos\sfmlresc\out;C:\Users\alexd\source\repos\sfmlresc\SFML\out\install\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -101,6 +105,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ImGui-SFML.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\alexd\source\repos\sfmlresc\SFML\out\install\lib;C:\Users\alexd\source\repos\sfmlresc\out;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -109,10 +115,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\alexd\source\repos\sfmlresc\SFML\out\install\include;C:\Users\alexd\source\repos\GT1\GT1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-audio.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;sfml-graphics.lib;opengl32.lib;ImGui-SFML.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\alexd\source\repos\sfmlresc\SFML\out\install\lib;C:\Users\alexd\source\repos\sfmlresc\out;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

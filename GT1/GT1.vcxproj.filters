@@ -21,9 +21,18 @@
     <ClCompile Include="src\state.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\single_imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\state.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\single_imgui.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui-SFML_export.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
